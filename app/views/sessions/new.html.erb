@@ -1,5 +1,5 @@
 <% provide(:title, "Log in") %>
-<h1>Log in</h1>
+<h1>로그인</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -14,12 +14,12 @@
 
       <%= f.label :remember_me, class: "checkbox inline" do %>
         <%= f.check_box :remember_me %>
-        <span>로그인 유지하기(개인 컴퓨터에서만 하세요.)</span>
+        <span>로그인 유지하기(개인 컴퓨터에서만 설정하시는 걸 추천합니다.)</span>
       <% end %>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+      <%= f.submit "로그인 하기", class: "btn btn-primary" %>
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p>아직 가입하지 않으셨나요? <%= link_to "여기를 클릭", signup_path %></p>
   </div>
 </div>

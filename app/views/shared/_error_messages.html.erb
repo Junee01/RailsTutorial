@@ -1,7 +1,7 @@
 <% if object.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
-      지금 화면에서 <%= pluralize(object.errors.count, "error") %>개의 에러가 발생했습니다.
+      현재 <%= pluralize(object.errors.count, "error") %>개의 에러가 발생했습니다.
     </div>
     <ul>
     <% object.errors.full_messages.each do |msg| %>
