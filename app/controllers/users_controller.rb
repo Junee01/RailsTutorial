@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
-      log_in @user #회원가입 후 바로 로그인
-  		flash[:success] = "성공적으로 회원가입이 되었습니다."
-  		redirect_to @user #redirect_to user_url(@user)와 같은 의미이다.
+      @user.send_activation_email
+      flash[:info] = "계정을 활성화하려면 이메일을 확인해주세요."
+      redirect_to root_url
   	else
   		render 'new'
   	end
